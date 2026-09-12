@@ -150,10 +150,12 @@ html[lang="ja"] .features h2 { font-family: var(--ja-stack); font-weight: 700; f
 .features p { margin-top: 0.6rem; color: var(--muted); }
 
 /* Made for groomers */
-.made { padding: 3rem 0; border-top: 1px solid var(--divider); }
+.made { padding: 2.5rem 0 1rem; }
+.made h2 { font-family: var(--display); font-size: clamp(2rem, 4.5vw, 2.75rem); color: var(--ink); line-height: 1.1; }
+html[lang="ja"] .made h2 { font-family: var(--ja-stack); font-weight: 700; font-size: clamp(1.6rem, 4vw, 2.2rem); }
 .eyebrow { font-family: var(--label); font-size: 0.9375rem; color: var(--sage); letter-spacing: 0.02em; }
 html[lang="ja"] .eyebrow { font-family: var(--ja-stack); }
-.made p.lede { margin-top: 0.75rem; font-size: 1.1875rem; }
+.made p.lede { margin-top: 1rem; font-size: clamp(1.25rem, 2.2vw, 1.5rem); line-height: 1.45; }
 
 /* Privacy strip */
 .privacy { background: var(--surface); padding: 2.75rem 0; }
