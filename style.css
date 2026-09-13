@@ -113,6 +113,22 @@ html[lang="ja"] .hero-aside h2 { font-family: var(--ja-stack); font-weight: 700;
   .hero-aside { border-left: 0; padding-left: 0; border-top: 1.5px solid var(--divider); padding-top: 1.75rem; }
 }
 
+/* Apple's official "Download on the App Store" badge. Guidelines: never altered, min 40px tall,
+   clear space of 1/4 badge height on all sides; black lockup on light, white on dark. */
+.store-badge { display: inline-block; line-height: 0; padding: 0.25em; margin: -0.25em; }
+.store-badge img { height: 56px; width: auto; display: block; }
+.store-badge .badge-white { display: none; }
+@media (prefers-color-scheme: dark) { .store-badge .badge-black { display: none; } .store-badge .badge-white { display: block; } }
+/* Sticky header: the download badge stays in reach below the fold. With JS, the header's badge
+   appears only once the hero's badge has scrolled away; without JS it is simply always there. */
+.site-header { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: saturate(140%) blur(10px); -webkit-backdrop-filter: saturate(140%) blur(10px); border-bottom: 1px solid transparent; transition: border-color 160ms ease; }
+.site-header:has(.header-badge.is-visible) { border-bottom-color: var(--divider); }
+.header-badge img { height: 34px; }
+.header-badge { margin-left: 0.75rem; }
+html.js .header-badge { opacity: 0; transform: translateY(-4px); pointer-events: none; transition: opacity 160ms ease, transform 160ms ease; }
+html.js .header-badge.is-visible { opacity: 1; transform: none; pointer-events: auto; }
+@media (max-width: 480px) { .header-badge img { height: 30px; } }
+
 .store-link {
   display: inline-block;
   padding: 0.8rem 1.4rem;

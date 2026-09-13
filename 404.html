@@ -25,13 +25,13 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="180x180" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="stylesheet" href="/style.css?v=e26ee1dc02">
+<link rel="stylesheet" href="/style.css?v=b79052161d">
 </head>
 <body>
 <header class="site-header">
   <div class="wrap">
     <a class="wordmark" href="/"><svg class="paw" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><ellipse cx="7" cy="9" rx="2.2" ry="2.8"/><ellipse cx="12" cy="6.5" rx="2.3" ry="3"/><ellipse cx="17" cy="9" rx="2.2" ry="2.8"/><path d="M12 12C8.7 12 6 14.1 6 17.2 6 19.2 7.7 20.5 9.8 19.9 10.7 19.6 11.3 19 12 19 12.7 19 13.3 19.6 14.2 19.9 16.3 20.5 18 19.2 18 17.2 18 14.1 15.3 12 12 12Z"/></svg>Woof</a>
-    <nav class="site-nav" aria-label="Site"><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/ja/">日本語</a></nav>
+    <nav class="site-nav" aria-label="Site"><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/ja/">日本語</a><a class="store-badge header-badge" href="https://apps.apple.com/app/id6800118662" aria-label="Download on the App Store"><img class="badge-black" src="/img/app-store-badge-black.svg" alt="Download on the App Store" width="120" height="40"><img class="badge-white" src="/img/app-store-badge-white.svg" alt="" width="120" height="40" aria-hidden="true"></a></nav>
   </div>
 </header>
 <main class="lost">
@@ -47,5 +47,8 @@
     <p><a href="mailto:support@w00f.app">support@w00f.app</a> · © 2026 Cary Feuer</p>
   </div>
 </footer>
+<script id="hero-badge-observer">
+(function(){var h=document.querySelector('.hero .store-badge'),b=document.querySelector('.header-badge');if(!h||!b||!('IntersectionObserver' in window))return;document.documentElement.classList.add('js');new IntersectionObserver(function(e){b.classList.toggle('is-visible',!e[0].isIntersecting)},{threshold:0}).observe(h)})();
+</script>
 </body>
 </html>
