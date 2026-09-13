@@ -125,8 +125,10 @@ html[lang="ja"] .hero-aside h2 { font-family: var(--ja-stack); font-weight: 700;
 .site-header:has(.header-badge.is-visible) { border-bottom-color: var(--divider); }
 .header-badge img { height: 36px; }
 .header-badge { margin-left: 0.5rem; display: inline-flex; align-items: center; }
-html.js .header-badge { opacity: 0; transform: translateY(-4px); pointer-events: none; transition: opacity 160ms ease, transform 160ms ease; }
-html.js .header-badge.is-visible { opacity: 1; transform: none; pointer-events: auto; }
+/* Hidden = no layout footprint, so the nav links sit flush with the grid's right edge; shown = fade in. */
+html.js .header-badge:not(.is-visible) { display: none; }
+html.js .header-badge.is-visible { animation: badge-in 180ms ease-out; }
+@keyframes badge-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
 @media (max-width: 480px) { .header-badge img { height: 30px; } }
 
 .store-link {
