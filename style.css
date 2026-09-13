@@ -124,7 +124,7 @@ html[lang="ja"] .hero-aside h2 { font-family: var(--ja-stack); font-weight: 700;
 .site-header { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: saturate(140%) blur(10px); -webkit-backdrop-filter: saturate(140%) blur(10px); border-bottom: 1px solid transparent; transition: border-color 160ms ease; }
 .site-header:has(.header-badge.is-visible) { border-bottom-color: var(--divider); }
 .header-badge img { height: 36px; }
-.header-badge { margin-left: 0.5rem; display: inline-flex; align-items: center; }
+.header-badge { margin-right: 0.5rem; display: inline-flex; align-items: center; }
 /* Hidden = no layout footprint, so the nav links sit flush with the grid's right edge; shown = fade in. */
 html.js .header-badge:not(.is-visible) { display: none; }
 html.js .header-badge.is-visible { animation: badge-in 180ms ease-out; }
