@@ -204,7 +204,7 @@ html[lang="ja"] .privacy h2 { font-family: var(--ja-stack); font-weight: 700; fo
 /* Closing CTA */
 .closing { padding: 3.5rem 0 3rem; text-align: center; }
 .closing p { color: var(--muted); }
-.closing .store-link { margin-top: 1.5rem; }
+.closing .store-badge { margin-top: 2rem; }
 
 /* Footer */
 .site-footer { border-top: 1px solid var(--divider); padding: 2rem 0 3rem; font-size: 0.9375rem; color: var(--muted); }
