@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
+<script>(function(){var t=localStorage.getItem('woof-theme');if(t)document.documentElement.setAttribute('data-theme',t);document.addEventListener('click',function(e){var b=e.target.closest('.theme-toggle');if(!b)return;var cur=document.documentElement.getAttribute('data-theme');var dark=cur?cur==='dark':matchMedia('(prefers-color-scheme: dark)').matches;var next=dark?'light':'dark';document.documentElement.setAttribute('data-theme',next);localStorage.setItem('woof-theme',next);});})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>サポート — Woof</title>
 <meta name="description" content="Woofのサポート（英語）。">
@@ -25,13 +26,13 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="180x180" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="stylesheet" href="/style.css?v=c98ea89a17">
+<link rel="stylesheet" href="/style.css?v=35d4ffa0a7">
 </head>
 <body>
 <header class="site-header">
   <div class="wrap">
     <a class="wordmark" href="/ja/"><svg class="paw" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><ellipse cx="7" cy="9" rx="2.2" ry="2.8"/><ellipse cx="12" cy="6.5" rx="2.3" ry="3"/><ellipse cx="17" cy="9" rx="2.2" ry="2.8"/><path d="M12 12C8.7 12 6 14.1 6 17.2 6 19.2 7.7 20.5 9.8 19.9 10.7 19.6 11.3 19 12 19 12.7 19 13.3 19.6 14.2 19.9 16.3 20.5 18 19.2 18 17.2 18 14.1 15.3 12 12 12Z"/></svg>Woof</a>
-    <nav class="site-nav" aria-label="サイト"><a class="store-badge header-badge" href="https://apps.apple.com/app/id6800118662" aria-label="Download on the App Store"><img class="badge-black" src="/img/app-store-badge-black.svg" alt="Download on the App Store" width="120" height="40"><img class="badge-white" src="/img/app-store-badge-white.svg" alt="" width="120" height="40" aria-hidden="true"></a><a href="/ja/support/">サポート</a><a href="/ja/privacy/">プライバシー</a><a href="/">English</a></nav>
+    <nav class="site-nav" aria-label="サイト"><a class="store-badge header-badge" href="https://apps.apple.com/app/id6800118662" aria-label="Download on the App Store"><img class="badge-black" src="/img/app-store-badge-black.svg" alt="Download on the App Store" width="120" height="40"><img class="badge-white" src="/img/app-store-badge-white.svg" alt="" width="120" height="40" aria-hidden="true"></a><a href="/ja/support/">サポート</a><a href="/ja/privacy/">プライバシー</a><button class="theme-toggle" type="button" aria-label="ライト/ダークモードの切り替え"><svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg><svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.8 14.5A8.5 8.5 0 1 1 9.5 3.2 7 7 0 0 0 20.8 14.5Z"/></svg></button><a href="/">English</a></nav>
   </div>
 </header>
 <main class="doc">
@@ -49,7 +50,7 @@
 <footer class="site-footer">
   <div class="wrap">
     <ul><li><a href="/ja/privacy/">プライバシーポリシー</a></li><li><a href="/ja/terms/">利用規約</a></li><li><a href="/ja/support/">サポート</a></li><li><a href="/">English</a></li></ul>
-    <p><a href="mailto:support@w00f.app">support@w00f.app</a> · © 2026 Cary Feuer</p>
+    <p><a href="mailto:support@w00f.app">support@w00f.app</a> · © 2026</p>
   </div>
 </footer>
 <script id="hero-badge-observer">

@@ -50,6 +50,47 @@
   }
 }
 
+/* Manual theme override (wins over system preference either direction) */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #201B15;
+  --surface: #2C251D;
+  --ink: #F3E9D8;
+  --muted: rgba(243, 233, 216, 0.66);
+  --faint: rgba(243, 233, 216, 0.48);
+  --divider: #3B3228;
+  --accent: #CE7B41;
+  --accent-deep: #E6A56F;
+  --accent-soft: #33271D;
+  --sage: #63744A;
+  --sage-soft: #3A4430;
+  --frame: #0F0C09;
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #F5EAD8;
+  --surface: #EADEC6;
+  --ink: #1C1A17;
+  --muted: rgba(28, 26, 23, 0.62);
+  --faint: rgba(28, 26, 23, 0.45);
+  --divider: #E1D4BB;
+  --accent: #C67139;
+  --accent-deep: #9C5327;
+  --accent-soft: #F3E1D1;
+  --sage: #566640;
+  --sage-soft: #DBE2CB;
+  --frame: #1C1A17;
+}
+
+.theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; padding: 0; border: 0; background: none; color: var(--ink); cursor: pointer; border-radius: 999px; }
+.theme-toggle:hover { background: var(--surface); }
+.theme-toggle .icon-moon { display: none; }
+@media (prefers-color-scheme: dark) { .theme-toggle .icon-sun { display: none; } .theme-toggle .icon-moon { display: block; } }
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
+:root[data-theme="light"] .theme-toggle .icon-sun { display: block; }
+:root[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+
 @media (min-width: 720px) { :root { --gutter: 2rem; } }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -119,6 +160,10 @@ html[lang="ja"] .hero-aside h2 { font-family: var(--ja-stack); font-weight: 700;
 .store-badge img { height: 56px; width: auto; display: block; }
 .store-badge .badge-white { display: none; }
 @media (prefers-color-scheme: dark) { .store-badge .badge-black { display: none; } .store-badge .badge-white { display: block; } }
+:root[data-theme="dark"] .store-badge .badge-black { display: none; }
+:root[data-theme="dark"] .store-badge .badge-white { display: block; }
+:root[data-theme="light"] .store-badge .badge-black { display: block; }
+:root[data-theme="light"] .store-badge .badge-white { display: none; }
 /* Sticky header: the download badge stays in reach below the fold. With JS, the header's badge
    appears only once the hero's badge has scrolled away; without JS it is simply always there. */
 .site-header { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: saturate(140%) blur(10px); -webkit-backdrop-filter: saturate(140%) blur(10px); border-bottom: 1px solid transparent; transition: border-color 160ms ease; }
