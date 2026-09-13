@@ -90,7 +90,10 @@ p + p { margin-top: 1em; }
 /* Hero */
 .hero { padding: 3rem 0 3rem; }
 .hero-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); column-gap: clamp(2rem, 6vw, 5rem); align-items: end; }
-.hero h1 { font-family: var(--display); font-size: clamp(2.5rem, 7.2vw, 4.75rem); line-height: 1.02; letter-spacing: -0.01em; color: var(--ink); max-width: 14ch; }
+.hero h1 { font-family: var(--display); font-size: clamp(2.5rem, 4.9vw, 4.25rem); line-height: 1.02; letter-spacing: -0.01em; color: var(--ink); }
+/* Desktop: exactly two lines, broken after the ampersand; the second line never wraps (a lone "diary." is a widow). Phones: natural wrapping. */
+.hero h1 .nobr { white-space: nowrap; }
+@media (max-width: 860px) { .hero h1 br.desk { display: none; } .hero h1 .nobr { white-space: normal; } .hero h1 { font-size: clamp(2.5rem, 11vw, 3.5rem); } }
 html[lang="ja"] .hero h1 { font-family: var(--ja-stack); font-weight: 700; font-size: clamp(2rem, 6vw, 3.4rem); line-height: 1.25; max-width: none; }
 .hero .deck { margin-top: 1.5rem; font-family: var(--label); font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.4; color: var(--ink); max-width: 30em; }
 html[lang="ja"] .hero .deck { font-family: var(--ja-stack); font-size: clamp(1.1rem, 1.8vw, 1.3rem); line-height: 1.7; }
