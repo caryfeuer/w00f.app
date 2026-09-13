@@ -81,7 +81,8 @@ p + p { margin-top: 1em; }
 /* Header */
 .site-header { padding: 1.25rem 0; }
 .site-header .wrap { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
-.wordmark { font-family: var(--display); font-size: 1.75rem; color: var(--accent); text-decoration: none; letter-spacing: 0.005em; }
+.wordmark { display: inline-flex; align-items: center; gap: 0.4em; font-family: var(--display); font-size: 1.75rem; color: var(--accent); text-decoration: none; letter-spacing: 0.005em; }
+.wordmark .paw { width: 0.95em; height: 0.95em; fill: currentColor; flex: none; transform: translateY(-0.04em); }
 .wordmark:hover { color: var(--accent-deep); }
 .site-nav { display: flex; gap: 1.25rem; font-size: 0.9375rem; }
 .site-nav a { color: var(--muted); text-decoration: none; }
