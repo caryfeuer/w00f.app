@@ -129,7 +129,12 @@ html[lang="ja"] .hero-aside h2 { font-family: var(--ja-stack); font-weight: 700;
 html.js .header-badge:not(.is-visible) { display: none; }
 html.js .header-badge.is-visible { animation: badge-in 180ms ease-out; }
 @keyframes badge-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
-@media (max-width: 480px) { .header-badge img { height: 30px; } }
+/* The sticky download badge earns its space on desktop only. On phones it crowds the wordmark
+   and three useful navigation links; the full-size badge remains in the hero and closing CTA. */
+@media (max-width: 719px) {
+  .header-badge,
+  html.js .header-badge.is-visible { display: none; }
+}
 
 .store-link {
   display: inline-block;
