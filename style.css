@@ -213,3 +213,8 @@ html[lang="ja"] .doc h1 { font-family: var(--ja-stack); font-weight: 700; }
 .lost p { margin-top: 1rem; color: var(--muted); }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* Japanese headlines: no spaces means the browser may otherwise break inside a phrase ("簡単 / な").
+   keep-all forbids breaks between CJK characters; <wbr> marks the 文節 boundaries where a break is
+   allowed; balance evens the two lines. Body text keeps normal wrapping — that is correct for prose. */
+.jp-phrases { word-break: keep-all; overflow-wrap: anywhere; text-wrap: balance; line-break: strict; }
