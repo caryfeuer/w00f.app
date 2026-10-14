@@ -328,25 +328,19 @@ html[lang="ja"] .doc h1 { font-family: var(--ja-stack); font-weight: 700; }
    allowed; balance evens the two lines. Body text keeps normal wrapping — that is correct for prose. */
 .jp-phrases { word-break: keep-all; overflow-wrap: anywhere; text-wrap: balance; line-break: strict; }
 
-/* 日本語 404 (Cary, 2026-10-14: "make it adorable"): a dog digging, only its wagging tail out of
-   the hole, and the flat tag dropped on the mound. Still under Reduce Motion. */
-.lost-dig { padding: 3rem 0 4.5rem; }
-.dig { display: block; width: min(100%, 22rem); height: auto; margin: 0 auto 1.5rem; }
-.dig-shadow { fill: var(--surface); }
-.dig-mound { fill: #A06C45; }
-.dig-mound-shade { fill: #87573A; }
-.dig-hole { fill: #2E1D12; }
-.dig-rump, .dig-legs rect { fill: #E2B275; }
-.dig-rump-light { fill: #EDC791; }
-.dig-legs ellipse { fill: #D9A666; }
-.dig-tail-stem { fill: none; stroke: #E2B275; stroke-width: 13; stroke-linecap: round; }
-.dig-tip { fill: #F6DDB2; }
-.dig-tail { transform-box: view-box; transform-origin: 160px 102px; animation: wag 0.38s ease-in-out infinite alternate; }
-.dig-specks circle { fill: #8E5E3E; transform-box: fill-box; animation: fling 1.4s ease-out infinite; opacity: 0; }
-.dig-specks .s2 { animation-delay: 0.35s; } .dig-specks .s3 { animation-delay: 0.7s; } .dig-specks .s4 { animation-delay: 1.05s; }
-@keyframes wag { from { transform: rotate(-22deg); } to { transform: rotate(18deg); } }
-@keyframes fling { 0% { opacity: 0; transform: translate(0, 0); } 15% { opacity: 1; } 100% { opacity: 0; transform: translate(var(--dx, -26px), -38px); } }
-.dig-specks .s2, .dig-specks .s4 { --dx: 26px; }
-.lost-dig h1 { font-family: var(--ja-stack); font-weight: 800; font-size: clamp(1.7rem, 6vw, 2.4rem); line-height: 1.35; }
+/* 日本語 404: L1 "Dug it up", M1's sibling, drawn in scripts/brand/marks.mjs (notFoundDig) and written
+   here by render.mjs lost. Its tail wag and flying clod live in the SVG and stop under Reduce Motion. */
+.lost-dig { padding: 2.5rem 0 4.5rem; }
+.lost-art { width: 100%; max-width: 34rem; margin: 0 auto 1.75rem; border-radius: 18px; overflow: hidden; }
+.lost-art img { width: 100%; height: auto; display: block; }
+.lost-art .art-dark { display: none; }
+@media (prefers-color-scheme: dark) { .lost-art .art-light { display: none; } .lost-art .art-dark { display: block; } }
+:root[data-theme="dark"] .lost-art .art-light { display: none; }
+:root[data-theme="dark"] .lost-art .art-dark { display: block; }
+:root[data-theme="light"] .lost-art .art-light { display: block; }
+:root[data-theme="light"] .lost-art .art-dark { display: none; }
+.lost-dig h1 { font-family: var(--display); font-weight: 400; font-size: clamp(2rem, 7vw, 2.75rem); line-height: 1.15; }
+html[lang="ja"] .lost-dig h1 { font-family: var(--ja-stack); font-weight: 800; font-size: clamp(1.7rem, 6vw, 2.4rem); line-height: 1.35; }
+.lost-ja { font-size: 0.875rem; }
+.lost-dig p { text-wrap: balance; }
 .lost-actions { margin-top: 1.75rem; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.75rem 1.5rem; }
-@media (prefers-reduced-motion: reduce) { .dig-tail, .dig-specks circle { animation: none; } .dig-specks { display: none; } }

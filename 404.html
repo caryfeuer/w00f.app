@@ -6,7 +6,7 @@
 <script>if(location.pathname.indexOf("/ja/")===0)location.replace("/ja/404.html")</script>
 <script>(function(){var t=localStorage.getItem('woof-theme');if(t)document.documentElement.setAttribute('data-theme',t);document.addEventListener('click',function(e){var b=e.target.closest('.theme-toggle');if(!b)return;var cur=document.documentElement.getAttribute('data-theme');var dark=cur?cur==='dark':matchMedia('(prefers-color-scheme: dark)').matches;var next=dark?'light':'dark';document.documentElement.setAttribute('data-theme',next);localStorage.setItem('woof-theme',next);});})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Not found — Woof</title>
+<title>Page not found — Woof</title>
 <meta name="description" content="That page is not here.">
 <meta name="robots" content="noindex">
 <meta property="og:type" content="website">
@@ -24,7 +24,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="180x180" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="stylesheet" href="/style.css?v=7a85d9382e">
+<link rel="stylesheet" href="/style.css?v=76f13bbafb">
 </head>
 <body>
 <header class="site-header">
@@ -33,11 +33,16 @@
     <nav class="site-nav" aria-label="Site"><a class="store-badge header-badge" href="https://apps.apple.com/app/id6800118662" aria-label="Download on the App Store"><img class="badge-black" src="/img/app-store-badge-black.svg" alt="Download on the App Store" width="120" height="40"><img class="badge-white" src="/img/app-store-badge-white.svg" alt="" width="120" height="40" aria-hidden="true"></a><a href="/support/">Support</a><a href="/privacy/">Privacy</a><button class="theme-toggle" type="button" aria-label="Toggle light and dark theme"><svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg><svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.8 14.5A8.5 8.5 0 1 1 9.5 3.2 7 7 0 0 0 20.8 14.5Z"/></svg></button><a href="/ja/404.html">日本語</a></nav>
   </div>
 </header>
-<main class="lost">
+<main class="lost lost-dig">
   <div class="wrap">
-    <h1>Nothing here.</h1>
-    <p>That page has wandered off. <a href="/">Back to Woof</a> · <a href="/support/">Support</a></p>
-    <p lang="ja">このページは見つかりませんでした。<a href="/ja/">日本語のトップへ</a></p>
+    <div class="lost-art">
+      <img class="art-light" src="/img/lost-dig.svg" width="340" height="140" alt="On a hill at sunset, a dog digs with its head down a hole. Woof's tag peeks out of the dirt beside it.">
+      <img class="art-dark" src="/img/lost-dig-dark.svg" width="340" height="140" alt="" aria-hidden="true">
+    </div>
+    <h1>A dog buried this page.</h1>
+    <p>It's digging it back up. Head home in the meantime.</p>
+    <p class="lost-actions"><a class="store-link" href="/">Back to home</a> <a href="/support/">Support</a></p>
+    <p lang="ja" class="lost-ja jp-phrases">このページは<wbr>見つかりませんでした。<wbr><a href="/ja/">日本語のトップへ</a></p>
   </div>
 </main>
 <footer class="site-footer">
