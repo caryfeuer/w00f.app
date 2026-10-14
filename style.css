@@ -22,6 +22,12 @@
   --sage: #566640;
   --sage-soft: #DBE2CB;
   --frame: #1C1A17;
+  /* Front page bands, from the v3 "Big and bold" store cards (docs/marketing/screenshots/v3/plan.json) */
+  --terra: #C4612C; --terra-ink: #FFF4E4; --terra-sub: #FFE9D2;
+  --cream: #F6EEDF; --cream-ink: #2A1F17; --cream-sub: #5E4B3B;
+  --espresso: #211A15; --esp-ink: #F6EEDF; --esp-sub: #D9CBB6;
+  --thread-on-light: rgba(42, 31, 23, 0.25); --thread-on-dark: rgba(255, 240, 220, 0.5);
+
 
   --ja-stack: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif;
   --body: "Figtree", -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif;
@@ -47,6 +53,11 @@
     --sage: #63744A;
     --sage-soft: #3A4430;
     --frame: #0F0C09;
+  --terra: #A9522A; --terra-ink: #FFF1DE; --terra-sub: #F7D9BF;
+  --cream: #2A231C; --cream-ink: #F6EEDF; --cream-sub: #CDBEA8;
+  --espresso: #120E0B; --esp-ink: #F6EEDF; --esp-sub: #CDBEA8;
+  --thread-on-light: rgba(246, 238, 223, 0.18); --thread-on-dark: rgba(255, 240, 220, 0.35);
+
   }
 }
 
@@ -65,6 +76,11 @@
   --sage: #63744A;
   --sage-soft: #3A4430;
   --frame: #0F0C09;
+  --terra: #A9522A; --terra-ink: #FFF1DE; --terra-sub: #F7D9BF;
+  --cream: #2A231C; --cream-ink: #F6EEDF; --cream-sub: #CDBEA8;
+  --espresso: #120E0B; --esp-ink: #F6EEDF; --esp-sub: #CDBEA8;
+  --thread-on-light: rgba(246, 238, 223, 0.18); --thread-on-dark: rgba(255, 240, 220, 0.35);
+
 }
 :root[data-theme="light"] {
   color-scheme: light;
@@ -80,6 +96,12 @@
   --sage: #566640;
   --sage-soft: #DBE2CB;
   --frame: #1C1A17;
+  /* Front page bands, from the v3 "Big and bold" store cards (docs/marketing/screenshots/v3/plan.json) */
+  --terra: #C4612C; --terra-ink: #FFF4E4; --terra-sub: #FFE9D2;
+  --cream: #F6EEDF; --cream-ink: #2A1F17; --cream-sub: #5E4B3B;
+  --espresso: #211A15; --esp-ink: #F6EEDF; --esp-sub: #D9CBB6;
+  --thread-on-light: rgba(42, 31, 23, 0.25); --thread-on-dark: rgba(255, 240, 220, 0.5);
+
 }
 
 .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; padding: 0; border: 0; background: none; color: var(--ink); cursor: pointer; border-radius: 999px; }
@@ -123,36 +145,12 @@ p + p { margin-top: 1em; }
 .site-header { padding: 0.75rem 0; }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 3.25rem; }
 .wordmark { display: inline-flex; align-items: center; gap: 0.4em; font-family: var(--display); font-size: 1.75rem; color: var(--accent); text-decoration: none; letter-spacing: 0.005em; }
-.wordmark .paw { width: 0.95em; height: 0.95em; fill: currentColor; flex: none; transform: translateY(-0.04em); }
 .wordmark:hover { color: var(--accent-deep); }
 .site-nav { display: flex; align-items: center; gap: 1.25rem; font-size: 0.9375rem; line-height: 1; }
-.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a { color: var(--muted); text-decoration: none; white-space: nowrap; }
+/* Phones: the privacy link lives in the footer, so the header keeps Support, the theme, and the language. */
+@media (max-width: 420px) { .site-nav { gap: 0.85rem; } .site-nav a[href$="/privacy/"] { display: none; } }
 .site-nav a:hover { color: var(--ink); }
-
-/* Hero */
-.hero { padding: 3rem 0 3rem; }
-.hero-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); column-gap: clamp(2rem, 6vw, 5rem); align-items: end; }
-.hero h1 { font-family: var(--display); font-size: clamp(2.5rem, 4.9vw, 4.25rem); line-height: 1.02; letter-spacing: -0.01em; color: var(--ink); }
-/* Desktop: exactly two lines, broken after the ampersand; the second line never wraps (a lone "diary." is a widow). Phones: natural wrapping. */
-.hero h1 .nobr { white-space: nowrap; }
-@media (max-width: 860px) { .hero h1 br.desk { display: none; } .hero h1 .nobr { white-space: normal; } .hero h1 { font-size: clamp(2.5rem, 11vw, 3.5rem); } }
-html[lang="ja"] .hero h1 { font-family: var(--ja-stack); font-weight: 700; font-size: clamp(2rem, 6vw, 3.4rem); line-height: 1.25; max-width: none; }
-.hero .deck { margin-top: 1.5rem; font-family: var(--label); font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.4; color: var(--ink); max-width: 30em; }
-html[lang="ja"] .hero .deck { font-family: var(--ja-stack); font-size: clamp(1.1rem, 1.8vw, 1.3rem); line-height: 1.7; }
-.cta { margin-top: 1.25rem; display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.5rem; }
-.cta small { color: var(--muted); font-size: 0.9375rem; line-height: 1.4; }
-.hero-aside { border-left: 1.5px solid var(--divider); padding-left: clamp(1.25rem, 2.5vw, 2rem); align-self: end; }
-.hero-aside h2 { font-family: var(--display); font-size: clamp(1.5rem, 2.4vw, 1.9rem); color: var(--ink); line-height: 1.1; }
-html[lang="ja"] .hero-aside h2 { font-family: var(--ja-stack); font-weight: 700; font-size: 1.4rem; }
-.hero-aside p { margin-top: 0.75rem; font-size: 1.0625rem; line-height: 1.5; color: var(--muted); }
-.facts { list-style: none; margin: 1rem 0 0; padding: 0; }
-.facts li { position: relative; padding-left: 1.1rem; font-size: 0.9375rem; line-height: 1.45; color: var(--muted); }
-.facts li + li { margin-top: 0.4rem; }
-.facts li::before { content: ""; position: absolute; left: 0; top: 0.55em; width: 0.4rem; height: 0.4rem; border-radius: 50%; background: var(--accent); }
-@media (max-width: 860px) {
-  .hero-grid { grid-template-columns: 1fr; row-gap: 2.25rem; }
-  .hero-aside { border-left: 0; padding-left: 0; border-top: 1.5px solid var(--divider); padding-top: 1.75rem; }
-}
 
 /* Apple's official "Download on the App Store" badge. Guidelines: never altered, min 40px tall,
    clear space of 1/4 badge height on all sides; black lockup on light, white on dark. */
@@ -195,61 +193,100 @@ html.js .header-badge.is-visible { animation: badge-in 180ms ease-out; }
 }
 .store-link:hover { background: var(--ink); color: var(--bg); }
 
-/* Screenshots */
-.shots { padding: 1.5rem 0 3rem; }
-.shots ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
-.shots li { min-width: 0; }
-.shots figure { margin: 0; }
-.shots figcaption { margin-top: 0.75rem; text-align: center; font-family: var(--label); font-size: 0.9375rem; color: var(--muted); }
-html[lang="ja"] .shots figcaption { font-family: var(--ja-stack); }
-.phone {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 300px;
-  padding: 10px;
-  border-radius: 44px;
-  background: var(--frame);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+/* Front page: "Big and bold" (Cary's pick, 2026-10-14). Full-width bands in the store cards'
+   terracotta, cream, and espresso, each with the stitched thread; phones rise out of their band. */
+.home .site-header { background: var(--terra); border-bottom-color: transparent; -webkit-backdrop-filter: none; backdrop-filter: none; }
+.home .site-header:has(.header-badge.is-visible) { border-bottom-color: color-mix(in srgb, var(--terra-ink) 25%, transparent); }
+.home .wordmark, .home .wordmark:hover { color: var(--terra-ink); }
+.home .site-nav a, .home .theme-toggle { color: var(--terra-sub); }
+.home .site-nav a:hover { color: var(--terra-ink); }
+.home .theme-toggle:hover { background: color-mix(in srgb, var(--terra-ink) 14%, transparent); }
+.home .site-header .store-badge .badge-black { display: block; }
+.home .site-header .store-badge .badge-white { display: none; }
+
+.band { position: relative; overflow: hidden; }
+.band::before { content: ""; position: absolute; left: var(--gutter); right: var(--gutter); top: 1.1rem; border-top: 3px dashed var(--thread); }
+.band.t { background: var(--terra); color: var(--terra-ink); --sub: var(--terra-sub); --thread: var(--thread-on-dark); }
+.band.c { background: var(--cream); color: var(--cream-ink); --sub: var(--cream-sub); --thread: var(--thread-on-light); }
+.band.e { background: var(--espresso); color: var(--esp-ink); --sub: var(--esp-sub); --thread: var(--thread-on-dark); }
+.band a, .band a:hover { color: inherit; }
+.band :focus-visible { outline-color: currentColor; }
+.band h1, .band h2 { font-family: var(--display); font-weight: 400; letter-spacing: -0.01em; }
+html[lang="ja"] .band h1, html[lang="ja"] .band h2 { font-family: var(--ja-stack); font-weight: 800; letter-spacing: -0.02em; }
+/* Apple's black badge reads on terracotta in both themes. */
+.band.t .store-badge .badge-black { display: block; }
+.band.t .store-badge .badge-white { display: none; }
+
+/* Hero: headline, one line, and the badge fit the first screen of a 375 pt phone. */
+.hero { padding: 1.5rem 0 3rem; }
+.hero::before { display: none; }
+.hero-grid { display: grid; gap: 2.25rem; }
+.hero h1 { font-size: clamp(3.25rem, 15vw, 6.25rem); line-height: 0.98; }
+html[lang="ja"] .hero h1 { font-size: clamp(2.6rem, 12vw, 5rem); line-height: 1.15; }
+.hero .deck { margin-top: 1rem; font-family: var(--label); font-size: clamp(1.2rem, 2vw, 1.4rem); line-height: 1.4; color: var(--sub); max-width: 24em; }
+html[lang="ja"] .hero .deck { font-family: var(--ja-stack); font-size: 1.05rem; line-height: 1.75; }
+.cta { margin-top: 1.5rem; display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.25rem; }
+.cta small { font-size: 0.9375rem; line-height: 1.4; color: var(--sub); }
+.preview { position: relative; width: min(76%, 300px); margin: 0 auto; }
+@media (min-width: 860px) {
+  .hero { padding: 3.5rem 0 4rem; }
+  .hero-grid { grid-template-columns: minmax(0, 1fr) 320px; align-items: center; gap: 3.5rem; }
+  .preview { width: 100%; }
 }
-.phone img { border-radius: 34px; width: 100%; aspect-ratio: 1320 / 2868; object-fit: cover; }
-@media (max-width: 719px) {
-  /* One phone at a time, swiped: the row scrolls inside itself, never the page. */
-  .shots .wrap { padding: 0; }
-  .shots ul {
-    display: flex; gap: 1rem;
-    overflow-x: auto; -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory; scroll-padding-inline: var(--gutter);
-    padding: 0.5rem var(--gutter) 1rem; scrollbar-width: none;
-  }
-  .shots ul::-webkit-scrollbar { display: none; }
-  .shots li { flex: 0 0 68%; scroll-snap-align: start; }
-  .phone { padding: 8px; border-radius: 36px; }
-  .phone img { border-radius: 28px; }
+
+/* Phone frame, for the video and the captures */
+.device { background: var(--frame); padding: 9px; border-radius: 42px; box-shadow: 0 14px 36px rgba(0, 0, 0, 0.22); }
+.device video, .device img { display: block; width: 100%; border-radius: 33px; background: #E9DFCC; }
+.device video { height: auto; aspect-ratio: 600 / 1300; object-fit: cover; }
+.preview-toggle { position: absolute; left: 50%; bottom: 1.5rem; transform: translateX(-50%); display: none; align-items: center; gap: 0.5rem; border: 0; cursor: pointer; background: rgba(28, 26, 23, 0.8); color: #F6EEDF; font: 500 0.875rem/1 var(--body); padding: 0.6rem 0.95rem 0.6rem 0.75rem; border-radius: 999px; white-space: nowrap; }
+html.js .preview-toggle { display: inline-flex; }
+html[lang="ja"] .preview-toggle { font-family: var(--ja-stack); }
+.preview-toggle svg { width: 14px; height: 14px; }
+.preview-toggle .i-pause, .preview-toggle.is-playing .i-play { display: none; }
+.preview-toggle.is-playing .i-pause { display: block; }
+.preview-toggle:focus-visible { outline: 2px solid #F6EEDF; outline-offset: 3px; }
+
+/* Feature bands, one per v3 store card */
+.feat { padding-top: 4rem; }
+.feat-grid { display: grid; gap: 1.75rem; }
+.feat h2 { font-size: clamp(2.6rem, 12vw, 4.5rem); line-height: 1; }
+html[lang="ja"] .feat h2 { font-size: clamp(2.1rem, 9.5vw, 3.6rem); line-height: 1.2; }
+.feat p { margin-top: 0.9rem; color: var(--sub); max-width: 30em; }
+/* The capture is the top two-thirds of the screen, so the phone runs off the bottom of its band. */
+.shot { position: relative; width: min(78%, 330px); margin: 0.5rem auto 0; }
+.shot .device { border-radius: 42px 42px 0 0; padding-bottom: 0; overflow: hidden; }
+.shot .device img { border-radius: 33px 33px 0 0; }
+.new { position: absolute; z-index: 1; top: -0.6rem; right: -0.6rem; width: 5.25rem; height: 5.25rem; border-radius: 50%; display: grid; place-items: center; background: var(--terra); color: var(--terra-ink); font-family: var(--display); font-size: 1.35rem; transform: rotate(-10deg); box-shadow: 0 0 0 4px var(--terra-ink), 0 8px 20px rgba(0, 0, 0, 0.25); }
+@media (min-width: 860px) {
+  .feat { padding-top: 5.5rem; }
+  .feat-grid { grid-template-columns: minmax(0, 1fr) 360px; gap: 4rem; align-items: start; }
+  .feat.flip .feat-grid { grid-template-columns: 360px minmax(0, 1fr); }
+  .feat.flip .shot { order: -1; }
+  .feat-text { padding: 1.5rem 0 4.5rem; }
+  .shot { width: 100%; margin: 0; }
 }
 
-/* Features */
-.features { padding: 2.5rem 0 1.5rem; }
-.features ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: 2.25rem 3rem; }
-@media (min-width: 720px) { .features ul { grid-template-columns: 1fr 1fr; } }
-.features h2 { font-family: var(--label); font-weight: 600; font-size: 1.375rem; color: var(--ink); }
-html[lang="ja"] .features h2 { font-family: var(--ja-stack); font-weight: 700; font-size: 1.25rem; }
-.features p { margin-top: 0.6rem; color: var(--muted); }
+/* 3 months free, made for groomers, privacy, closing */
+.notes { padding: 4rem 0; }
+.notes-grid { display: grid; gap: 2.5rem; }
+@media (min-width: 860px) { .notes-grid { grid-template-columns: 1fr 1fr; gap: 4rem; } }
+.notes h2 { font-size: clamp(2rem, 7vw, 2.5rem); line-height: 1.05; }
+html[lang="ja"] .notes h2 { font-size: clamp(1.6rem, 6vw, 2rem); line-height: 1.3; }
+.notes p { margin-top: 0.75rem; color: var(--sub); max-width: 34em; }
+.notes ul { margin: 0.75rem 0 0; padding-left: 1.1em; color: var(--sub); }
+.notes li + li { margin-top: 0.25rem; }
+.notes p a { white-space: nowrap; text-decoration: underline; }
+.closing { padding: 4.5rem 0; text-align: center; }
+.closing::before { display: none; }
+.closing h2 { font-size: clamp(2.4rem, 10vw, 4rem); line-height: 1.02; }
+html[lang="ja"] .closing h2 { font-size: clamp(1.8rem, 7vw, 2.8rem); line-height: 1.3; }
+.closing p { margin-top: 0.75rem; color: var(--sub); }
+.closing .store-badge { margin-top: 1.75rem; }
+.home .site-footer { border-top: 0; }
 
-/* Made for groomers */
-.eyebrow { font-family: var(--label); font-size: 0.9375rem; color: var(--sage); letter-spacing: 0.02em; }
-html[lang="ja"] .eyebrow { font-family: var(--ja-stack); }
-
-/* Privacy strip */
-.privacy { background: var(--surface); padding: 2.75rem 0; }
-.privacy h2 { font-family: var(--display); font-size: 1.875rem; color: var(--ink); }
-html[lang="ja"] .privacy h2 { font-family: var(--ja-stack); font-weight: 700; font-size: 1.5rem; }
-.privacy p { margin-top: 0.75rem; color: var(--muted); }
-.privacy a { white-space: nowrap; }
-
-/* Closing CTA */
-.closing { padding: 3.5rem 0 3rem; text-align: center; }
-.closing p { color: var(--muted); }
-.closing .store-badge { margin-top: 2rem; }
+/* Instagram link in every footer */
+.ig { display: inline-flex; align-items: center; gap: 0.35em; }
+.ig svg { width: 0.95em; height: 0.95em; }
 
 /* Footer */
 .site-footer { border-top: 1px solid var(--divider); padding: 2rem 0 3rem; font-size: 0.9375rem; color: var(--muted); }
@@ -290,3 +327,26 @@ html[lang="ja"] .doc h1 { font-family: var(--ja-stack); font-weight: 700; }
    keep-all forbids breaks between CJK characters; <wbr> marks the 文節 boundaries where a break is
    allowed; balance evens the two lines. Body text keeps normal wrapping — that is correct for prose. */
 .jp-phrases { word-break: keep-all; overflow-wrap: anywhere; text-wrap: balance; line-break: strict; }
+
+/* 日本語 404 (Cary, 2026-10-14: "make it adorable"): a dog digging, only its wagging tail out of
+   the hole, and the flat tag dropped on the mound. Still under Reduce Motion. */
+.lost-dig { padding: 3rem 0 4.5rem; }
+.dig { display: block; width: min(100%, 22rem); height: auto; margin: 0 auto 1.5rem; }
+.dig-shadow { fill: var(--surface); }
+.dig-mound { fill: #A06C45; }
+.dig-mound-shade { fill: #87573A; }
+.dig-hole { fill: #2E1D12; }
+.dig-rump, .dig-legs rect { fill: #E2B275; }
+.dig-rump-light { fill: #EDC791; }
+.dig-legs ellipse { fill: #D9A666; }
+.dig-tail-stem { fill: none; stroke: #E2B275; stroke-width: 13; stroke-linecap: round; }
+.dig-tip { fill: #F6DDB2; }
+.dig-tail { transform-box: view-box; transform-origin: 160px 102px; animation: wag 0.38s ease-in-out infinite alternate; }
+.dig-specks circle { fill: #8E5E3E; transform-box: fill-box; animation: fling 1.4s ease-out infinite; opacity: 0; }
+.dig-specks .s2 { animation-delay: 0.35s; } .dig-specks .s3 { animation-delay: 0.7s; } .dig-specks .s4 { animation-delay: 1.05s; }
+@keyframes wag { from { transform: rotate(-22deg); } to { transform: rotate(18deg); } }
+@keyframes fling { 0% { opacity: 0; transform: translate(0, 0); } 15% { opacity: 1; } 100% { opacity: 0; transform: translate(var(--dx, -26px), -38px); } }
+.dig-specks .s2, .dig-specks .s4 { --dx: 26px; }
+.lost-dig h1 { font-family: var(--ja-stack); font-weight: 800; font-size: clamp(1.7rem, 6vw, 2.4rem); line-height: 1.35; }
+.lost-actions { margin-top: 1.75rem; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.75rem 1.5rem; }
+@media (prefers-reduced-motion: reduce) { .dig-tail, .dig-specks circle { animation: none; } .dig-specks { display: none; } }

@@ -2,59 +2,13 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<script>(function(){var t=localStorage.getItem('woof-theme');if(t)document.documentElement.setAttribute('data-theme',t);document.addEventListener('click',function(e){var b=e.target.closest('.theme-toggle');if(!b)return;var cur=document.documentElement.getAttribute('data-theme');var dark=cur?cur==='dark':matchMedia('(prefers-color-scheme: dark)').matches;var next=dark?'light':'dark';document.documentElement.setAttribute('data-theme',next);localStorage.setItem('woof-theme',next);});})();</script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Old address: one copy of each page lives at /ja/support/ (2026-10-14). -->
 <title>サポート — Woof</title>
-<meta name="description" content="Woofのサポート（英語）。">
 <link rel="canonical" href="https://w00f.app/ja/support/">
-<link rel="alternate" hreflang="en" href="https://w00f.app/support/">
-<link rel="alternate" hreflang="ja" href="https://w00f.app/ja/support/">
-<link rel="alternate" hreflang="x-default" href="https://w00f.app/support/">
-<meta property="og:type" content="article">
-<meta property="og:site_name" content="Woof">
-<meta property="og:title" content="サポート — Woof">
-<meta property="og:description" content="Woofのサポート（英語）。">
-<meta property="og:url" content="https://w00f.app/ja/support/">
-<meta property="og:image" content="https://w00f.app/img/og.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:locale" content="ja_JP">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="apple-itunes-app" content="app-id=6800118662">
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F5EAD8">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#201B15">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="icon" type="image/png" sizes="180x180" href="/favicon.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="stylesheet" href="/style.css?v=35d4ffa0a7">
+<meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="0; url=/ja/support/">
 </head>
 <body>
-<header class="site-header">
-  <div class="wrap">
-    <a class="wordmark" href="/ja/"><svg class="paw" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><ellipse cx="7" cy="9" rx="2.2" ry="2.8"/><ellipse cx="12" cy="6.5" rx="2.3" ry="3"/><ellipse cx="17" cy="9" rx="2.2" ry="2.8"/><path d="M12 12C8.7 12 6 14.1 6 17.2 6 19.2 7.7 20.5 9.8 19.9 10.7 19.6 11.3 19 12 19 12.7 19 13.3 19.6 14.2 19.9 16.3 20.5 18 19.2 18 17.2 18 14.1 15.3 12 12 12Z"/></svg>Woof</a>
-    <nav class="site-nav" aria-label="サイト"><a class="store-badge header-badge" href="https://apps.apple.com/app/id6800118662" aria-label="Download on the App Store"><img class="badge-black" src="/img/app-store-badge-black.svg" alt="Download on the App Store" width="120" height="40"><img class="badge-white" src="/img/app-store-badge-white.svg" alt="" width="120" height="40" aria-hidden="true"></a><a href="/ja/support/">サポート</a><a href="/ja/privacy/">プライバシー</a><button class="theme-toggle" type="button" aria-label="ライト/ダークモードの切り替え"><svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg><svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.8 14.5A8.5 8.5 0 1 1 9.5 3.2 7 7 0 0 0 20.8 14.5Z"/></svg></button><a href="/">English</a></nav>
-  </div>
-</header>
-<main class="doc">
-  <div class="wrap">
-    <div class="measure">
-      <h1>サポート</h1>
-      <p class="lede">サポートページ（よくある質問）は現在英語のみです。iCloudバックアップ、新しいiPhoneへの復元、コームとバリカンのサイズ設定、フィードバックの送り方について説明しています。</p>
-      <p style="margin-top:1.5rem"><a class="store-link" href="/support/">Support (English)</a></p>
-      <div class="contact" style="margin-top:2.5rem">
-        <p>ご質問は <a href="mailto:support@w00f.app">support@w00f.app</a> まで。日本語でどうぞ。</p>
-      </div>
-    </div>
-  </div>
-</main>
-<footer class="site-footer">
-  <div class="wrap">
-    <ul><li><a href="/ja/privacy/">プライバシーポリシー</a></li><li><a href="/ja/terms/">利用規約</a></li><li><a href="/ja/support/">サポート</a></li><li><a href="/">English</a></li></ul>
-    <p><a href="mailto:support@w00f.app">support@w00f.app</a> · © 2026</p>
-  </div>
-</footer>
-<script id="hero-badge-observer">
-(function(){var h=document.querySelector('.hero .store-badge'),b=document.querySelector('.header-badge');if(!h||!b||!('IntersectionObserver' in window))return;document.documentElement.classList.add('js');new IntersectionObserver(function(e){b.classList.toggle('is-visible',!e[0].isIntersecting)},{threshold:0}).observe(h)})();
-</script>
+<p><a href="/ja/support/">サポート</a></p>
 </body>
 </html>
