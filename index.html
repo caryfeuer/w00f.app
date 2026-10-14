@@ -4,16 +4,16 @@
 <meta charset="utf-8">
 <script>(function(){var t=localStorage.getItem('woof-theme');if(t)document.documentElement.setAttribute('data-theme',t);document.addEventListener('click',function(e){var b=e.target.closest('.theme-toggle');if(!b)return;var cur=document.documentElement.getAttribute('data-theme');var dark=cur?cur==='dark':matchMedia('(prefers-color-scheme: dark)').matches;var next=dark?'light':'dark';document.documentElement.setAttribute('data-theme',next);localStorage.setItem('woof-theme',next);});})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Woof — Remember every dog.</title>
-<meta name="description" content="Woof is a grooming diary for independent dog groomers: the combs and blades, the price, notes, and before and after photos for every dog. 3 months free.">
+<title>Woof: Dog Grooming Records App | Remember every dog.</title>
+<meta name="description" content="The dog grooming app for independent groomers. Log combs, blades, price, notes, and before and after photos, and start each groom from the last cut. 3 months free.">
 <link rel="canonical" href="https://w00f.app/">
 <link rel="alternate" hreflang="en" href="https://w00f.app/">
 <link rel="alternate" hreflang="ja" href="https://w00f.app/ja/">
 <link rel="alternate" hreflang="x-default" href="https://w00f.app/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Woof">
-<meta property="og:title" content="Woof — Remember every dog.">
-<meta property="og:description" content="Woof is a grooming diary for independent dog groomers: the combs and blades, the price, notes, and before and after photos for every dog. 3 months free.">
+<meta property="og:title" content="Woof: Dog Grooming Records App | Remember every dog.">
+<meta property="og:description" content="The dog grooming app for independent groomers. Log combs, blades, price, notes, and before and after photos, and start each groom from the last cut. 3 months free.">
 <meta property="og:url" content="https://w00f.app/">
 <meta property="og:image" content="https://w00f.app/img/og.png">
 <meta property="og:image:width" content="1200">
@@ -26,13 +26,46 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="180x180" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="stylesheet" href="/style.css?v=76f13bbafb">
+<link rel="stylesheet" href="/style.css?v=5e890a016e">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "MobileApplication",
+ "name": "Woof Grooming Diary",
+ "alternateName": "Woof",
+ "description": "The dog grooming app for independent dog groomers: combs, blades, price, notes, and before and after photos for every dog, and each new groom starts from the last cut.",
+ "operatingSystem": "iOS 26.0 or later",
+ "applicationCategory": "BusinessApplication",
+ "applicationSubCategory": "Lifestyle",
+ "url": "https://w00f.app/",
+ "downloadUrl": "https://apps.apple.com/app/id6800118662",
+ "installUrl": "https://apps.apple.com/app/id6800118662",
+ "image": "https://w00f.app/img/og.png",
+ "screenshot": "https://w00f.app/img/shots/en-same_setup.jpg",
+ "inLanguage": [
+  "en",
+  "ja"
+ ],
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD",
+  "description": "Free download with in-app subscriptions"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Woof",
+  "url": "https://w00f.app/",
+  "email": "support@w00f.app"
+ }
+}
+</script>
 </head>
 <body class="home">
 <header class="site-header">
   <div class="wrap">
     <a class="wordmark" href="/">Woof</a>
-    <nav class="site-nav" aria-label="Site"><a class="store-badge header-badge" href="https://apps.apple.com/app/id6800118662" aria-label="Download on the App Store"><img class="badge-black" src="/img/app-store-badge-black.svg" alt="Download on the App Store" width="120" height="40"><img class="badge-white" src="/img/app-store-badge-white.svg" alt="" width="120" height="40" aria-hidden="true"></a><a href="/support/">Support</a><a href="/privacy/">Privacy</a><button class="theme-toggle" type="button" aria-label="Toggle light and dark theme"><svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg><svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.8 14.5A8.5 8.5 0 1 1 9.5 3.2 7 7 0 0 0 20.8 14.5Z"/></svg></button><a href="/ja/" lang="ja">日本語</a></nav>
+    <nav class="site-nav" aria-label="Site"><a class="store-badge header-badge" href="/app-store/" aria-label="Download on the App Store"><img class="badge-black" src="/img/app-store-badge-black.svg" alt="Download on the App Store" width="120" height="40"><img class="badge-white" src="/img/app-store-badge-white.svg" alt="" width="120" height="40" aria-hidden="true"></a><a href="/support/">Support</a><a href="/privacy/">Privacy</a><button class="theme-toggle" type="button" aria-label="Toggle light and dark theme"><svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg><svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.8 14.5A8.5 8.5 0 1 1 9.5 3.2 7 7 0 0 0 20.8 14.5Z"/></svg></button><a href="/ja/" lang="ja">日本語</a></nav>
   </div>
 </header>
 <main>
@@ -42,7 +75,7 @@
       <h1>Remember every dog.</h1>
       <p class="deck">The grooming diary for independent dog groomers.</p>
       <div class="cta">
-        <a class="store-badge" href="https://apps.apple.com/app/id6800118662" aria-label="Download on the App Store"><img class="badge-black" src="/img/app-store-badge-black.svg" alt="Download on the App Store" width="120" height="40"><img class="badge-white" src="/img/app-store-badge-white.svg" alt="" width="120" height="40" aria-hidden="true"></a>
+        <a class="store-badge" href="/app-store/" aria-label="Download on the App Store"><img class="badge-black" src="/img/app-store-badge-black.svg" alt="Download on the App Store" width="120" height="40"><img class="badge-white" src="/img/app-store-badge-white.svg" alt="" width="120" height="40" aria-hidden="true"></a>
         <small>3 months free from your first groom.</small>
       </div>
     </div>
@@ -91,7 +124,7 @@
 <section class="band c notes">
   <div class="wrap notes-grid">
     <div><h2>3 months free</h2><p>Log as many grooms as you like for 3 months from your first. After that, a subscription keeps new grooms coming. What you've logged stays yours to read and edit either way.</p></div>
-    <div><h2>Made for groomers</h2><p>Built with a working groomer who kept her notes on paper, in Apple Notes, and in her camera roll. Woof is a diary, not a salon system: no booking, no payments, no client portal.</p><ul><li>English and 日本語. Light and dark.</li><li>No account, no ads, no tracking.</li></ul></div>
+    <div><h2>Made for groomers</h2><p>Built with a working groomer who kept her notes on paper, in Apple Notes, and in her camera roll. Woof is a diary, not a salon system: no booking, no payments, no client portal.</p><ul><li>English and 日本語. Light and dark.</li><li>No account, no ads, no tracking.</li></ul><p class="notes-link">Need a blade length? <a href="/clipper-blade-chart/">See the blade and comb chart</a>.</p></div>
   </div>
 </section>
 <section class="band e notes">
@@ -101,13 +134,13 @@
   <div class="wrap">
     <h2>Try Woof free for 3 months.</h2>
     <p>Download it today and make your next groom easier.</p>
-    <a class="store-badge" href="https://apps.apple.com/app/id6800118662" aria-label="Download on the App Store"><img class="badge-black" src="/img/app-store-badge-black.svg" alt="Download on the App Store" width="120" height="40"><img class="badge-white" src="/img/app-store-badge-white.svg" alt="" width="120" height="40" aria-hidden="true"></a>
+    <a class="store-badge" href="/app-store/" aria-label="Download on the App Store"><img class="badge-black" src="/img/app-store-badge-black.svg" alt="Download on the App Store" width="120" height="40"><img class="badge-white" src="/img/app-store-badge-white.svg" alt="" width="120" height="40" aria-hidden="true"></a>
   </div>
 </section>
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    <ul><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li><li><a href="/support/">Support</a></li><li><a class="ig" href="https://www.instagram.com/woofgroomingdiary/" aria-label="Woof on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>Instagram</a></li><li><a href="/ja/">日本語</a></li></ul>
+    <ul><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li><li><a href="/support/">Support</a></li><li><a href="/clipper-blade-chart/">Blade &amp; comb chart</a></li><li><a class="ig" href="https://www.instagram.com/woofgroomingdiary/" aria-label="Woof on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>Instagram</a></li><li><a href="/ja/">日本語</a></li></ul>
     <p><a href="mailto:support@w00f.app">support@w00f.app</a> · © 2026</p>
   </div>
 </footer>

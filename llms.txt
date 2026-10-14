@@ -1,0 +1,32 @@
+# Woof
+
+> Woof (Woof Grooming Diary; 日本語: Woof トリミング日記) is an iPhone app for independent dog groomers: a grooming diary that keeps the combs and blades, price, notes, and before and after photos for every dog, so each groom starts from the last one. English and 日本語. Made with a working groomer.
+
+Woof is a diary, not a salon system: no booking, no payments, and no client portal. It has no account, no server, no analytics, and no ads. The diary lives on the groomer's iPhone and in their own private iCloud.
+
+## What Woof 1.2.0 does
+
+- Same setup as last time: start a returning dog's groom from the last groom's combs and blades in one tap, or have Woof fill them in every time (Settings › When starting a groom…).
+- Before and after photos: one before photo and up to three after photos per groom, shared side by side to Instagram, Messages, and more, with the caption copied.
+- Every groom on the dog's page, newest first: combs and blades for body, head, and ears, the face, and notes.
+- Comb and blade sizes on Andis's scale, with only the sizes the groomer owns shown; millimeters in 日本語.
+- Search by name, typos included; Home shelved by date.
+- Light and dark, a choice of app icons, English and 日本語; export to a spreadsheet plus photos.
+
+## Price
+
+- Free to download. Logging is free for 3 months from the first groom.
+- After that, logging new grooms needs an auto-renewing subscription (Woof Monthly or Woof Annual), priced in the App Store in local currency. Everything already logged stays readable and editable without one.
+
+## Links
+
+- [Woof, English](https://w00f.app/)
+- [Woof, 日本語](https://w00f.app/ja/)
+- [Dog clipper blade chart and snap-on comb sizes](https://w00f.app/clipper-blade-chart/): sourced A5 blade lengths (in and mm) and why comb numbers differ between brands
+- [替刃サイズ一覧とコームの番号](https://w00f.app/ja/clipper-blade-chart/)
+- [Support and FAQ](https://w00f.app/support/) · [サポート](https://w00f.app/ja/support/)
+- [Privacy Policy](https://w00f.app/privacy/) · [Terms of Use](https://w00f.app/terms/)
+- [Woof on the App Store](https://apps.apple.com/app/id6800118662)
+- [Instagram: @woofgroomingdiary](https://www.instagram.com/woofgroomingdiary/)
+
+Contact: support@w00f.app
