@@ -2,7 +2,7 @@
 
 > Woof (Woof Grooming Diary; 日本語: Woof トリミング日記) is an iPhone app for independent dog groomers: a grooming diary that keeps the combs and blades, price, notes, and before and after photos for every dog, so each groom starts from the last one. English and 日本語. Made with a working groomer.
 
-Woof is a diary, not a salon system: no booking, no payments, and no client portal. It has no account, no server, no analytics, and no ads. The diary lives on the groomer's iPhone and in their own private iCloud.
+Woof is a diary, not a salon system: no booking, no payments, and no client portal. It has no account, no ads, and no tracking. The diary lives on the groomer's iPhone and in their own private iCloud; the app reports only which features get used, under a random install number, never what's in the diary.
 
 ## What Woof 1.2.0 does
 

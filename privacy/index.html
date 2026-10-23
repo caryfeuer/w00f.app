@@ -5,7 +5,7 @@
 <script>(function(){var t=localStorage.getItem('woof-theme');if(t)document.documentElement.setAttribute('data-theme',t);document.addEventListener('click',function(e){var b=e.target.closest('.theme-toggle');if(!b)return;var cur=document.documentElement.getAttribute('data-theme');var dark=cur?cur==='dark':matchMedia('(prefers-color-scheme: dark)').matches;var next=dark?'light':'dark';document.documentElement.setAttribute('data-theme',next);localStorage.setItem('woof-theme',next);});})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy | Woof Dog Grooming App</title>
-<meta name="description" content="Woof is a private grooming diary. Your dogs and grooms stay on your iPhone and in your own iCloud. No account, no server, no analytics, no ads.">
+<meta name="description" content="Woof is a private grooming diary. Your dogs and grooms stay on your iPhone and in your own iCloud. No account, no ads, no tracking. Woof counts which features get used, never what you write.">
 <link rel="canonical" href="https://w00f.app/privacy/">
 <link rel="alternate" hreflang="en" href="https://w00f.app/privacy/">
 <link rel="alternate" hreflang="ja" href="https://w00f.app/ja/privacy/">
@@ -13,7 +13,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Woof">
 <meta property="og:title" content="Privacy Policy | Woof Dog Grooming App">
-<meta property="og:description" content="Woof is a private grooming diary. Your dogs and grooms stay on your iPhone and in your own iCloud. No account, no server, no analytics, no ads.">
+<meta property="og:description" content="Woof is a private grooming diary. Your dogs and grooms stay on your iPhone and in your own iCloud. No account, no ads, no tracking. Woof counts which features get used, never what you write.">
 <meta property="og:url" content="https://w00f.app/privacy/">
 <meta property="og:image" content="https://w00f.app/img/og.png">
 <meta property="og:image:width" content="1200">
@@ -39,51 +39,64 @@
   <div class="wrap">
     <div class="measure">
       <h1>Woof Privacy Policy</h1>
-      <p class="meta">Effective 12 September 2026. Last updated 14 October 2026. Applies to the iPhone app <em>Woof Grooming Diary</em> (“Woof”), published by support@w00f.app.</p>
-      <p class="lede">The short version: Woof is a private diary. What you write in it stays on your iPhone and in your own iCloud. We never see it. We do not collect anything about you.</p>
+      <p class="meta">Effective 12 September 2026. Last updated 22 October 2026. Applies to the iPhone app <em>Woof Grooming Diary</em> (“Woof”), published by support@w00f.app.</p>
+      <p class="lede">The short version: Woof is a private diary. What you write in it stays on your iPhone and in your own iCloud. We never see it. Woof does tell us which features get used, such as “a groom was saved”. It does that under a random number made on your iPhone, never with your name, your Apple Account, or anything written in your diary. If you answer the optional survey, your answers come to us too.</p>
 
       <h2>What Woof stores</h2>
       <p>Woof stores only what you put into it:</p>
       <ul>
-        <li>dog names, breeds, and the price you charge for each dog</li>
-        <li>for each groom: the date, the comb and blade sizes you used, your Face and Notes text, the price for that day, one ‘Before’ photo, and up to three ‘After’ photos</li>
-        <li>your app preferences: language, theme, app icon, sort order, which comb and blade sizes appear in the editor, and what happens when you start a groom (the ‘Before’ photo and whether to use the last groom's combs and blades)</li>
+        <li>dog names, breeds, the price you charge for each dog, and each dog’s profile note</li>
+        <li>for each groom: the date, the start and finish times if you record them, the comb and blade sizes you used, your Face and Notes text, the price for that day, one ‘Before’ photo, and up to three ‘After’ photos</li>
+        <li>your app preferences: language, mode (light or dark), theme, app icon, sort order, which comb and blade sizes appear in the editor, and what happens when you start a groom (the ‘Before’ photo, whether to use the last groom’s combs and blades, and whether to record times)</li>
         <li>the day your free months began, so Woof can show how many are left</li>
       </ul>
 
       <h2>Where it lives</h2>
       <ul>
-        <li><strong>On your iPhone</strong>, in Woof's own storage.</li>
-        <li><strong>In your private iCloud database</strong> (Apple CloudKit), when your iPhone is signed in to iCloud. This is what brings the diary back on a new or replaced phone. It is stored under your own Apple Account, in your iCloud storage, and it is protected by Apple's iCloud security.</li>
+        <li><strong>On your iPhone</strong>, in Woof’s own storage.</li>
+        <li><strong>In your private iCloud database</strong> (Apple CloudKit), when your iPhone is signed in to iCloud. This is what brings the diary back on a new or replaced phone. It is stored under your own Apple Account, in your iCloud storage, and it is protected by Apple’s iCloud security.</li>
       </ul>
-      <p>The developer has <strong>no access</strong> to your private iCloud database. There is no Woof server, no Woof account, and no copy of your diary anywhere we can reach. If you delete Woof and its iCloud data, it is gone for us as much as for you.</p>
-      <p>Apple's handling of iCloud is governed by Apple's own privacy policy, not this one.</p>
+      <p>The developer has <strong>no access</strong> to your private iCloud database. There is no Woof account, and no copy of your diary anywhere we can reach. If you delete Woof and its iCloud data, it is gone for us as much as for you.</p>
+      <p>Apple’s handling of iCloud is governed by Apple’s own privacy policy, not this one.</p>
 
       <h2>What Woof does not do</h2>
       <ul>
-        <li><strong>No analytics or usage tracking.</strong> Woof does not measure what you tap or how often you open it.</li>
+        <li><strong>No tracking.</strong> The usage data described below is never linked to your name, email, Apple Account, or device, and is never combined with data from other apps or companies.</li>
         <li><strong>No accounts.</strong> There is nothing to sign up for or sign in to.</li>
-        <li><strong>No advertising</strong>, no advertising identifiers, no cross-app tracking.</li>
+        <li><strong>No advertising</strong>, no advertising identifiers, and no cross-app tracking.</li>
         <li><strong>No third-party SDKs.</strong> Woof contains only Apple frameworks and its own code.</li>
-        <li><strong>No sale or sharing of data</strong>, because there is no data to sell or share.</li>
-        <li><strong>No network requests</strong> other than iCloud sync between your device and your own iCloud, and Apple's App Store for subscriptions.</li>
+        <li><strong>No sale or sharing of data.</strong> We never sell the usage data or the survey answers, or share them with anyone.</li>
+        <li><strong>No other network requests.</strong> Woof talks only to your own iCloud (to sync your diary), to Apple’s App Store (for subscriptions), and to our server (for the usage data and survey answers below).</li>
       </ul>
+
+      <h2>Usage data</h2>
+      <p>To learn which parts of Woof are useful, and how people’s use of them changes over time, Woof tells us what you use. This is part of how Woof works, for everyone, and there is no setting to turn it off. That’s why this section says exactly what is sent and what never is.</p>
+      <p><strong>The random number.</strong> Your copy of Woof has a random number made on your iPhone. It is not your Apple Account, not your iPhone’s identifier, and not an advertising identifier, and nothing about you is used to make it. Woof sends it with the usage data so we can see one person’s use over time, such as when a feature was first tried and whether it stuck. We don’t know whose number it is, and we never put it in a feedback email or anywhere else that would connect it to you. It stays on this iPhone: a new phone, or reinstalling Woof, starts a new one.</p>
+      <p><strong>What is sent:</strong> that something happened, such as a dog or a groom being saved, a groom being edited or shared, an export, the subscription screen being shown, a purchase finishing (and whether it went through), the survey being shown, put off, or answered, or a feedback email being sent. Each comes with a few fixed words or yes/no answers: for example, whether a groom has a ‘Before’ photo and how many ‘After’ photos (0 to 3), whether a share included the dog’s name, where the subscription screen was opened from, or whether feedback was an idea, a problem, or something else.</p>
+      <p>Once a day Woof also says it was used that day (and whether that’s the first time this week or month), along with your settings for language, mode (light, dark, or following the iPhone), app icon, and starting a groom, whether iCloud backup is on, and whether you’re in your free months or subscribed. Every send includes the Woof version, the iOS version, and the week you first opened this version of Woof (or just that you had Woof before it).</p>
+      <p>Once a week Woof also sends a short summary of how this copy of Woof is used, so we can see how many people use each feature and how much. It covers how many days you opened Woof in the last four weeks; roughly how many dogs and grooms are in your diary, in ranges such as “20–49”; and what share of your grooms have Notes, Face notes, a ‘Before’ photo, or an ‘After’ photo, in steps of 10&nbsp;%. It also covers roughly how often you have shared, exported, edited a groom, started from the last groom’s combs and blades, changed the app icon, or visited the Fidget Spaniel, and roughly how many minutes you spent there; whether the screen is showing light or dark; and your settings. Woof works these out on your iPhone from whether a field is filled in. The words, photos, and dates themselves are never sent.</p>
+      <p><strong>What is never sent:</strong> dog names, breeds, prices, profile notes, Face or Notes text, comb and blade sizes, photos, the dates or times of your grooms, exact counts from your diary, anything you type (except the few optional words in the survey below), your name, your email, your Apple Account, your iPhone’s name or model, or its advertising or vendor identifier.</p>
+      <p><strong>Where it goes:</strong> to a server run by the developer, hosted by Vercel, with the counts stored by Upstash. Your iPhone’s IP address reaches the server, as with any internet connection. We use it only to stop abuse, by turning it into a one-way code that is deleted after two minutes. We do not store or log it, and we do not work out your location from it. Vercel, which hosts the server, may keep it briefly in its own request logs. The server keeps running totals, such as “42 grooms saved this week”, and, under each random number, the usage data sent with it, marked only with the week it happened.</p>
+      <p><strong>Stopping and deleting.</strong> Deleting Woof stops it, and a reinstall starts a new random number with no connection to the old one. Data under a number that hasn’t been used for about 13 months is deleted. Because we don’t know whose number is whose, we can’t look up one person’s data from a name or an email.</p>
+
+      <h2>The “Tell us about yourself” survey</h2>
+      <p>Woof may ask five optional questions: where you groom, how long you have been grooming, where you kept notes before, what you most need to remember about a dog, and how you found Woof. Every answer is a tap from a fixed list. Where an answer is “Somewhere else” or “Something else”, picking it opens a small box where you can add a few words of your own, up to 100 characters, if you like. Please don’t type names there: yours, a client’s, or a dog’s. Your answers are sent only when you tap Send. They go to the same server, with your random number, the week they arrived, and the language you use Woof in, so we can see how answers relate to the features people use. If you answer again, the new answers replace the old ones. They’re kept and deleted like the usage data above.</p>
 
       <h2>Camera and photo library</h2>
       <p>Woof asks for <strong>camera</strong> access only when you tap Take Photo, and <strong>photo library</strong> access only when you tap Choose from Library. The photo you take or choose is stored in the diary. Woof does not add photos to your photo library and does not change it. You can withdraw either permission at any time in iPhone Settings; the rest of the app keeps working.</p>
 
       <h2>Subscriptions</h2>
-      <p>Subscriptions are bought and managed through Apple's App Store. Apple handles the payment; we never see your payment details or your Apple Account. Woof talks to the App Store only to show the prices, make the purchase you choose, and check whether a subscription is active.</p>
+      <p>Subscriptions are bought and managed through Apple’s App Store. Apple handles the payment; we never see your payment details or your Apple Account. Woof talks to the App Store only to show the prices, make the purchase you choose, and check whether a subscription is active.</p>
 
       <h2>Send feedback</h2>
-      <p>Settings → Send feedback opens an email in <strong>your own mail app</strong>, addressed to <a href="mailto:feedback@w00f.app">feedback@w00f.app</a>. You write it, you read it, you send it. Woof does not store or transmit the note itself.</p>
-      <p>The email body contains your note plus a short, visible block so we can act on it: the Woof version and build, the iOS version and iPhone model, the language you use Woof in, and whether iCloud backup was on or off. Nothing else — no dog names, notes or photos. Because it is an email, we receive your email address with it; we use it only to reply.</p>
+      <p>Settings → Share your thoughts → Send feedback opens an email in <strong>your own mail app</strong>, addressed to <a href="mailto:feedback@w00f.app">feedback@w00f.app</a>. You write it, you read it, and you send it. Woof does not store or transmit the note itself. Once it’s sent, Woof’s usage data notes that feedback was sent and whether it was an idea, a problem, or something else, never the note.</p>
+      <p>The email body contains your note plus a short, visible block so we can act on it: the Woof version and build, the iOS version and iPhone model, the language you use Woof in, and whether iCloud backup is on. If backup has had a problem, the block also says when it last worked and the reason it gave. Nothing else: no dog names, notes, or photos. Because it is an email, we receive your email address with it; we use it only to reply.</p>
 
       <h2>Children</h2>
-      <p>Woof is a tool for working groomers and is not directed at children under 13. We do not knowingly collect information from anyone, of any age.</p>
+      <p>Woof is a tool for working groomers and is not directed at children under 13. We do not knowingly collect personal information from anyone, of any age.</p>
 
       <h2>Changes</h2>
-      <p>If Woof ever starts to collect or transmit anything beyond what is described here, this policy will be updated first and the effective date at the top will change. The current version always lives at <a href="https://w00f.app/privacy">https://w00f.app/privacy</a>.</p>
+      <p>If Woof ever starts to collect or send anything beyond what is described here, this policy will be updated first and the date at the top will change. The current version always lives at <a href="https://w00f.app/privacy">https://w00f.app/privacy</a>.</p>
 
       <h2>Contact</h2>
       <div class="contact">
