@@ -237,6 +237,22 @@ html.js .header-badge.is-visible { animation: badge-in 180ms ease-out; }
 .band.e { background: var(--espresso); color: var(--esp-ink); --sub: var(--esp-sub); --device-edge: #5C4A3F; }
 .band.e + .band, .band + .band.e { border-top-color: var(--esp-line); }
 .band a, .band a:hover { color: inherit; }
+/* The front page's hero and feature bands take their App Store card's ground (creative v4,
+   docs/marketing/screenshots/v4/plan.json): sand, paper, Forest, Crimson, Plum, Navy, and Biscuit's
+   terracotta, each with the card's ink. Theme colours hold in dark mode, as the app's band does;
+   the light grounds give way to dark mode's lit espresso. Card 7's sub-line takes its headline cream
+   (#FFF4E4, 4.7:1): the card's #FBE6D3 reads 4.2:1, fine at the card's 60 px, not at body size. */
+.band.k-sand { background: var(--k-sand, #EADEC6); color: var(--k-sand-ink, #24130B); --sub: var(--k-sand-sub, #4F4234); }
+.band.k-paper { background: var(--cream); color: var(--cream-ink); --sub: var(--cream-sub); }
+.band.k-forest { background: #1E5B3A; color: #FFFCF6; --sub: #E4F0E8; --device-edge: #24130B; }
+.band.k-crimson { background: #C8102E; color: #FFFCF6; --sub: #FFE6EA; --device-edge: #24130B; }
+.band.k-plum { background: #5E2750; color: #FFFCF6; --sub: #F3E4EF; --device-edge: #24130B; }
+.band.k-navy { background: #1B2F5E; color: #FFFCF6; --sub: #E1E8F5; --device-edge: #24130B; }
+.band.k-terra { background: #A9562A; color: #FFF4E4; --sub: #FFF4E4; --device-edge: #24130B; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .band.k-sand { --k-sand: transparent; --k-sand-ink: var(--ink); --k-sand-sub: var(--muted); }
+}
+:root[data-theme="dark"] .band.k-sand { --k-sand: transparent; --k-sand-ink: var(--ink); --k-sand-sub: var(--muted); }
 .band :focus-visible { outline-color: currentColor; }
 .band h1, .band h2 { font-family: var(--display); font-weight: 400; letter-spacing: -0.01em; }
 html[lang="ja"] .band h1, html[lang="ja"] .band h2 { font-family: var(--display); font-weight: 400; letter-spacing: 0; }
@@ -244,8 +260,9 @@ html[lang="ja"] .band h1, html[lang="ja"] .band h2 { font-family: var(--display)
 /* Hero: headline, one line, and the badge fit the first screen of a 375 pt phone. */
 .hero { padding: 1.5rem 0 3rem; }
 .hero-grid { display: grid; gap: 2.25rem; }
-.hero h1 { font-size: clamp(2.75rem, 12.4vw, 5.5rem); line-height: 1.02; }
-html[lang="ja"] .hero h1 { font-size: clamp(2.3rem, 10.5vw, 4.5rem); line-height: 1.22; }
+/* Sized so the headline sets in card 1's two lines: "By groomers," / 「トリマーのための日記。」 fit one line. */
+.hero h1 { font-size: clamp(2.2rem, 9.2vw, 4.25rem); line-height: 1.04; }
+html[lang="ja"] .hero h1 { font-size: clamp(1.8rem, 7.6vw, 3.4rem); line-height: 1.25; }
 .hero .deck { margin-top: 1rem; font-family: var(--body); font-weight: 700; font-size: clamp(1.15rem, 2vw, 1.35rem); line-height: 1.45; color: var(--sub); max-width: 24em; }
 html[lang="ja"] .hero .deck { font-family: var(--ja-stack); font-size: 1.05rem; line-height: 1.75; }
 .cta { margin-top: 1.5rem; display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.25rem; }
@@ -274,13 +291,22 @@ html[lang="ja"] .preview-toggle { font-family: var(--ja-stack); }
 .feat-grid { display: grid; gap: 1.75rem; }
 .feat h2 { font-size: clamp(2.2rem, 10vw, 3.9rem); line-height: 1.05; }
 html[lang="ja"] .feat h2 { font-size: clamp(1.9rem, 8.6vw, 3.2rem); line-height: 1.25; }
-.feat p { margin-top: 0.9rem; color: var(--sub); max-width: 30em; }
+.feat p { margin-top: 0.9rem; color: var(--sub); max-width: 30em; text-wrap: pretty; }
 /* The capture is the top two-thirds of the screen, so the phone runs off the bottom of its band. */
 .shot { position: relative; width: min(78%, 330px); margin: 0.5rem auto 0; }
 .shot .device { border-radius: 42px 42px 0 0; padding-bottom: 0; overflow: hidden; }
 .shot .device img { border-radius: 33px 33px 0 0; }
+html[lang="ja"] .new { font-family: var(--body); font-weight: 700; font-size: 1.15rem; letter-spacing: 0.04em; padding-top: 0.4rem; padding-bottom: 0.35rem; }
+/* Card 2's icon fan above its phone, at the card's proportions (scripts/make-site-shots.py prints
+   them): 108.84 % of the phone's width, its bottom 7.45 % of that width above the phone. */
+.shot .fan { display: block; width: 108.84%; max-width: none; margin: 0 0 7.45% -4.42%; height: auto; }
+/* Card 1's rosette pinned on the hero phone as on the card: its button 87.24 % across the phone's
+   top edge, the head 34.07 % of the phone's width (the image is 1.429 heads wide, its button at
+   57.43 % x 27.97 % of it). Half the head peeks over the frame and it covers Home's gear. */
+.preview .rosette { position: absolute; z-index: 1; left: 87.24%; top: 0; width: 48.69%; max-width: none; height: auto; margin-top: 0.4%; transform: translate(-57.43%, -27.97%); pointer-events: none; }
+@media (max-width: 859px) { .preview { margin-top: 2.5rem; } }
 /* "New": the store cards' gold ribbon with a swallowtail notch, in sign capitals. */
-.new { position: absolute; z-index: 1; top: 1.25rem; right: -0.9rem; display: block; padding: 0.3rem 1.7rem 0.25rem 0.85rem; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 40' preserveAspectRatio='none'%3E%3Cpolygon points='1,1 99,1 87,20 99,39 1,39' fill='%23FFB81C' stroke='%2324130B' stroke-width='2' stroke-linejoin='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") center / 100% 100% no-repeat; color: #24130B; font-family: var(--caps); font-weight: 900; font-size: 1.5rem; line-height: 1; letter-spacing: 0.06em; text-transform: uppercase; }
+.new { display: inline-block; margin-bottom: 1rem; padding: 0.3rem 1.7rem 0.25rem 0.85rem; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 40' preserveAspectRatio='none'%3E%3Cpolygon points='1,1 99,1 87,20 99,39 1,39' fill='%23FFB81C' stroke='%2324130B' stroke-width='2' stroke-linejoin='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") center / 100% 100% no-repeat; color: #24130B; font-family: var(--caps); font-weight: 900; font-size: 1.5rem; line-height: 1; letter-spacing: 0.06em; text-transform: uppercase; }
 @media (min-width: 860px) {
   .feat { padding-top: 5.5rem; }
   .feat-grid { grid-template-columns: minmax(0, 1fr) 360px; gap: 4rem; align-items: start; }
